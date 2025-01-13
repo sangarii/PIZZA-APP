@@ -31,9 +31,10 @@ class _HomeScreenState extends State<HomeScreen> {
           Icon(Icons.arrow_back_ios)
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: const Items(),
+      body: const Padding(
+        padding:  EdgeInsets.all(15.0),
+        child: 
+         Items(),
       ),
     );
   }

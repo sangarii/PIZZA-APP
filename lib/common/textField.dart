@@ -4,10 +4,11 @@ import 'colors.dart';
 
 class CommonTextField extends StatelessWidget {
   final String? hintText;
+  final TextInputType? keyBoardtype;
   final Icon? icon;
   final TextEditingController? controller;
   final String? Function(String?)? onChanged;
-  const CommonTextField({super.key, this.hintText, this.onChanged,this.icon,this.controller});
+  const CommonTextField({super.key, this.hintText, this.onChanged,this.icon,this.controller,this.keyBoardtype});
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +29,14 @@ class CommonTextField extends StatelessWidget {
       ),
     );
     return TextField(
-      controller: controller,
+      controller: controller,keyboardType: keyBoardtype,
       onChanged: onChanged,
       decoration: InputDecoration(
           hintText: hintText,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
           ),
-          contentPadding: const EdgeInsets.all(25),
+          // contentPadding: const EdgeInsets.all(20),
           filled: true,
           fillColor: Colors.white,
           prefixIcon: icon,
@@ -72,7 +73,7 @@ class CommonTextArea extends StatelessWidget {
     );
     return TextField(
       controller: controller,
-      onChanged: onChanged,maxLines: 5,
+      onChanged: onChanged,maxLines: 2,
       decoration: InputDecoration(
           hintText: hintText,
           border: OutlineInputBorder(

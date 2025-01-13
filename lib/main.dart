@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pizza_app/screen/addList.dart';
+import 'package:pizza_app/screen/home.dart';
 
-import 'screen/login.dart';
+import 'screen/addList.dart';
 
 void main() {
   runApp(const MyApp());
